@@ -18,7 +18,7 @@ Replace this paragraph with your own summary of what your version does.
 ## How The System Works
 
 Explain your design in plain language.
-Takes in the genre of the song and based on a user information suggests back song. For my song I have genre +2 points,mood +2 points,energy +2 points,tempo_bpm +0.5 points,valence +0.5 points,danceability +1 points
+Takes in the genre of the song and based on a user information suggests back songs. For my algorithm I have genre as +3 points (genre matches what the user wants more than anything),mood +2 points(mood also very important. People usually listen to the same kind of song in a row),energy +2 points (very important as if a user prefers a certain kind of energy they would their songs to match well),tempo_bpm +0.5 points(not very important but generally the same pace of song will go together as the user might have a slight preference for it),danceability +1 points (important as it fits closer to the kind of song the user is listening to currently)
 
 Some prompts to answer:
 
@@ -74,13 +74,60 @@ You can add more tests in `tests/test_recommender.py`.
 
 Paste a sample of your recommender's output here as a text block so a reader can see what it produces:
 
+Run with `python -m src.main` (default pop/happy profile):
+
 ```
-# e.g.:
-# User profile: genre=indie, mood=chill, energy=low
-# Recommendations:
-#   1. ...
-#   2. ...
-#   3. ...
+Loading songs from data/songs.csv...
+Loaded songs: 18
+User profile: genre=pop, mood=happy, energy=0.8
+
+============================================================
+                    TOP RECOMMENDATIONS
+============================================================
+
+#1  Sunrise City  (Neon Echo)
+    Score: 8.44
+    Reasons:
+      - genre match: pop (+3.0)
+      - mood match: happy (+2.0)
+      - energy 0.82 vs target 0.80 (+1.96)
+      - danceability 0.79 vs target 0.80 (+0.99)
+      - tempo 118 vs target 120 BPM (+0.49)
+------------------------------------------------------------
+
+#2  Gym Hero  (Max Pulse)
+    Score: 6.10
+    Reasons:
+      - genre match: pop (+3.0)
+      - energy 0.93 vs target 0.80 (+1.74)
+      - danceability 0.88 vs target 0.80 (+0.92)
+      - tempo 132 vs target 120 BPM (+0.44)
+------------------------------------------------------------
+
+#3  Rooftop Lights  (Indigo Parade)
+    Score: 5.38
+    Reasons:
+      - mood match: happy (+2.0)
+      - energy 0.76 vs target 0.80 (+1.92)
+      - danceability 0.82 vs target 0.80 (+0.98)
+      - tempo 124 vs target 120 BPM (+0.48)
+------------------------------------------------------------
+
+#4  Night Drive Loop  (Neon Echo)
+    Score: 3.28
+    Reasons:
+      - energy 0.75 vs target 0.80 (+1.90)
+      - danceability 0.73 vs target 0.80 (+0.93)
+      - tempo 110 vs target 120 BPM (+0.45)
+------------------------------------------------------------
+
+#5  Concrete Crown  (Kilo Verse)
+    Score: 3.28
+    Reasons:
+      - energy 0.78 vs target 0.80 (+1.96)
+      - danceability 0.85 vs target 0.80 (+0.95)
+      - tempo 94 vs target 120 BPM (+0.37)
+------------------------------------------------------------
 ```
 
 **Screenshot or video** _(optional)_: <!-- Insert a screenshot or demo video link here -->

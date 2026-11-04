@@ -32,6 +32,20 @@ Prompts:
 
 Avoid code here. Pretend you are explaining the idea to a friend who does not program.
 
+**Algorithmic approach (plain language):**
+
+Think of the recommender as a judge giving every song in the catalog a points score out of 8.5, based on how well it fits what the listener says they like. The listener describes their taste with a favorite genre, a mood, and how energetic, danceable and fast they want the music to be.
+
+- **Genre (up to 3 points):** If the song's genre is exactly the listener's favorite, it gets 3 points. Otherwise it gets none. Genre is worth the most because it is usually the biggest deal-breaker.
+- **Mood (up to 2 points):** If the song's mood (happy, chill, intense, and so on) matches, it gets 2 points.
+- **Energy (up to 2 points):** The closer the song's energy is to what the listener wants, the more points it gets. A perfect match earns the full 2, and the points shrink as the gap grows.
+- **Danceability (up to 1 point):** Works the same way as energy, but counts for less.
+- **Tempo (up to 0.5 points):** The closer the speed (beats per minute) is to the target, the more points. A song 100 or more BPM away gets nothing.
+
+Once every song has a score, the recommender sorts them from highest to lowest and shows the top 5. For each one, it also lists exactly where the points came from (for example "genre match: pop (+3.0)"), so the listener can see *why* a song was picked.
+
+The key idea is that genre and mood are yes-or-no matches that give big point jumps, while energy, danceability and tempo are "how close" measures that give partial credit. A song that misses on genre can still rank well if it nails the mood and feel.
+
 ---
 
 ## 4. Data  
