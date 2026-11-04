@@ -58,14 +58,6 @@ EDGE_CASE_PROFILES = {
         "tempo_bpm": 115,
         "danceability": 0.75,
     },
-    # Capitalised labels: exact string matching won't see "Pop" as "pop"
-    "Case Mismatch": {
-        "genre": "Pop",
-        "mood": "Happy",
-        "energy": 0.80,
-        "tempo_bpm": 120,
-        "danceability": 0.80,
-    },
     # Energy outside the 0-1 range
     "Out-of-Range Energy": {
         "genre": "metal",

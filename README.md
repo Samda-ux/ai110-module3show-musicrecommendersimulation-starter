@@ -435,55 +435,6 @@ Profile: {'genre': 'k-pop', 'mood': 'dreamy', 'energy': 0.7, 'tempo_bpm': 115, '
 ------------------------------------------------------------
 ```
 
-#### Case Mismatch
-
-```
-============================================================
-                       CASE MISMATCH
-============================================================
-Profile: {'genre': 'Pop', 'mood': 'Happy', 'energy': 0.8, 'tempo_bpm': 120, 'danceability': 0.8}
-
-#1  Sunrise City  (Neon Echo)
-    Score: 3.44
-    Reasons:
-      - energy 0.82 vs target 0.80 (+1.96)
-      - danceability 0.79 vs target 0.80 (+0.99)
-      - tempo 118 vs target 120 BPM (+0.49)
-------------------------------------------------------------
-
-#2  Rooftop Lights  (Indigo Parade)
-    Score: 3.38
-    Reasons:
-      - energy 0.76 vs target 0.80 (+1.92)
-      - danceability 0.82 vs target 0.80 (+0.98)
-      - tempo 124 vs target 120 BPM (+0.48)
-------------------------------------------------------------
-
-#3  Night Drive Loop  (Neon Echo)
-    Score: 3.28
-    Reasons:
-      - energy 0.75 vs target 0.80 (+1.90)
-      - danceability 0.73 vs target 0.80 (+0.93)
-      - tempo 110 vs target 120 BPM (+0.45)
-------------------------------------------------------------
-
-#4  Concrete Crown  (Kilo Verse)
-    Score: 3.28
-    Reasons:
-      - energy 0.78 vs target 0.80 (+1.96)
-      - danceability 0.85 vs target 0.80 (+0.95)
-      - tempo 94 vs target 120 BPM (+0.37)
-------------------------------------------------------------
-
-#5  Gym Hero  (Max Pulse)
-    Score: 3.10
-    Reasons:
-      - energy 0.93 vs target 0.80 (+1.74)
-      - danceability 0.88 vs target 0.80 (+0.92)
-      - tempo 132 vs target 120 BPM (+0.44)
-------------------------------------------------------------
-```
-
 #### Out-of-Range Energy
 
 ```

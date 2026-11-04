@@ -97,17 +97,27 @@ Prompts:
 
 - Which user profiles you tested
   High-Energy Pop, Chill Lofi, Deep Intense Rock, Sad but Hyped, Unknown Genre(k-pop, dreamy),
-  Case Mismatch, Out-of-Range Energy
+  Out-of-Range Energy
 - What you looked for in the recommendations
   Genre and mood were the most looked in recommending stuff. Next was energy
 - What surprised you
   Capital letters broke it, empty profile still returns 5 songs
 - Any simple tests or comparisons you ran
-  - High-Energy Pop vs Chill Lofi: they share no songs
-  - High-Energy Pop vs Deep Intense Rock share multiple
-  - Chill Lofi vs Deep Intense Rock: they share no songs
-  - High-Energy Pop vs Case Mismatch: the same profile with "Pop"/"Happy" capitalized drops Sunrise City from 8.44 to 3.44
-  - Deep Intense Rock vs Sad but Hyped both lists end up with Gym Hero and Storm Runner
+  - High-Energy Pop and Chill Lofi do not share songs since pop wants high energy tracks and lofi wants slow.
+  - High-Energy Pop and Deep Intense Rock share Gym Hero and Sunrise City because both want high energy
+  - High-Energy Pop and Sad but Hyped share Gym Hero and Sunrise City as they both prefer higher energy
+  - High-Energy Pop and Unknown Genre share 3 songs Sunrise City, Rooftop Lights, Night Drive Loop
+  - High-Energy Pop and Out-of-Range Energy share only Gym Hero and Sunrise City as the high energy prefers it
+  - Chill Lofi and Deep Intense Rock have no shared songs and rock's #1 ranks near the bottom for lofi.
+  - Chill Lofi and Sad but Hyped have no shared songs
+  - Chill Lofi and Unknown Genre have no shared songs, since Unknown Genre's was mid-high energy
+  - Chill Lofi and Out-of-Range Energy have no shared songs, and lofi does not share songs with any other profiles
+  - Deep Intense Rock and Sad but Hyped share 4 of 5 songs (Gym Hero, Storm Runner, Pulse Theory, Sunrise City) as the genres are similar
+  - Deep Intense Rock and Unknown Genre share only Sunrise City, since Unknown Genre wants lower energy and tempo
+  - Deep Intense Rock and Out-of-Range Energy share 4 songs, but Out-of-Range scores are much lower (Storm Runner 2.07 vs 8.41)
+  - Sad but Hyped and Unknown Genre they share only Sunrise City, and both lists are mostly filler because their genre and mood are rare or missing.
+  - Sad but Hyped and Out-of-Range Energy share 4 songs (Storm Runner, Gym Hero, Pulse Theory, Sunrise City)
+  - Unknown Genre and Out-of-Range Energy share only Sunrise City
 
 ---
 
