@@ -54,9 +54,13 @@ Describe the dataset the model uses.
 Prompts:
 
 - How many songs are in the catalog
+  18
 - What genres or moods are represented
+  pop,happy, lofi, chill, rock,intense, ambient, jazz, relaxed synthwave, moody, focused, indie pop, hip hop, confident, r&b,romantic, metal, angry, country,nostalgic, classical, melancholy reggae, uplifting, edm, euphoric blues, sad
 - Did you add or remove data
+  Yes
 - Are there parts of musical taste missing in the dataset
+  Yes many genres, more moods, different instrumental types
 
 ---
 
@@ -67,8 +71,11 @@ Where does your system seem to work well
 Prompts:
 
 - User types for which it gives reasonable results
+  Pop
 - Any patterns you think your scoring captures correctly
+  Gym Hero and Sunrise City were constantly re appearing
 - Cases where the recommendations matched your intuition
+  Only when recommending Pop songs
 
 ---
 
@@ -79,13 +86,13 @@ Where the system struggles or behaves unfairly.
 Prompts:
 
 - Features it does not consider
-  - Acousticness, valence, lyrics, and listening context are ignored
+  Acousticness, valence, lyrics, and listening context are ignored
 - Genres or moods that are underrepresented
-  - Most genres and moods have only one song
+  Most genres and moods have only one song
 - Cases where the system overfits to one preference
-  - Genre and mood outweigh all numeric features, so a lofi song beats an ambient song that might the user better
+  Genre and mood outweigh all numeric features, so a lofi song beats an ambient song that might the user better
 - Ways the scoring might unintentionally favor some users
-  - Pop and lofi listeners get several strong matches, while users with rare tastes get very little
+  Pop and lofi listeners get several strong matches, while users with rare tastes get very little
 
 ---
 
@@ -128,9 +135,11 @@ Ideas for how you would improve the model next.
 Prompts:
 
 - Additional features or preferences
+- More features, better algorithms, possible ML models.
 - Better ways to explain recommendations
 - Improving diversity among the top results
 - Handling more complex user tastes
+- Uses significantly larger datasets
 
 ---
 
@@ -141,5 +150,8 @@ A few sentences about your experience.
 Prompts:
 
 - What you learned about recommender systems
+  They are arbritary and heavily based on whatever algorithm or choices the creator used
 - Something unexpected or interesting you discovered
+  That selecting recommendations are very arbritary
 - How this changed the way you think about music recommendation apps
+  These are just glorified choices made by someone for us
