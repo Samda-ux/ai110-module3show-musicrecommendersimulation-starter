@@ -18,17 +18,17 @@ Replace this paragraph with your own summary of what your version does.
 ## How The System Works
 
 Explain your design in plain language.
-Takes in the genre of the song and based on a user information suggests back songs. For my algorithm I have genre as +3 points (genre matches what the user wants more than anything),mood +2 points(mood also very important. People usually listen to the same kind of song in a row),energy +2 points (very important as if a user prefers a certain kind of energy they would their songs to match well),tempo_bpm +0.5 points(not very important but generally the same pace of song will go together as the user might have a slight preference for it),danceability +1 points (important as it fits closer to the kind of song the user is listening to currently)
+Takes in the genre of the song and based on a user information suggests back songs. For my algorithm I have genre as +3 points (genre matches what the user wants more than anything),mood +2 points(mood also very important. People usually listen to the same kind of song in a row),energy is x3 the value to points (very important as if a user prefers a certain kind of energy they would their songs to match well),tempo_bpm +0.5 points(not very important but generally the same pace of song will go together as the user might have a slight preference for it),danceability +1 points (important as it fits closer to the kind of song the user is listening to currently)
 
 Some prompts to answer:
 
-- What features does each `Song` use in your system
+- What features does each `Song` use in your system?
   genre, mood, energy, tempo, danceability
-- What information does your `UserProfile` store
+- What information does your `UserProfile` store?
   favorite_genre, favorite_mood,target_energym, likes_acoustic
-- How does your `Recommender` compute a score for each song
+- How does your `Recommender` compute a score for each song?
   Uses pre determined values for each category and adds up all the values to give a recommendation
-- How do you choose which songs to recommend
+- How do you choose which songs to recommend?
   Based on genre, mood, energy, tempo, danceability, etc.
   You can include a simple diagram or bullet list if helpful.
 
@@ -139,11 +139,11 @@ User profile: genre=pop, mood=happy, energy=0.8
 
 Use this section to document the experiments you ran. For example:
 
-- What happened when you changed the weight on genre from 2.0 to 0.5
+- What happened when you changed the weight on genre from 2.0 to 0.5?
   The recommendation became much weaker as genre is very important
-- What happened when you added tempo or valence to the score
+- What happened when you added tempo or valence to the score?
   The recommendation skewed slightly because it started overrepresenting the tempo of the song rather than the song's feel
-- How did your system behave for different types of users
+- How did your system behave for different types of users?
   Some users failed in finding good recommendations as the system didn't accurately recommend
 
 ---

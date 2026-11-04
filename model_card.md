@@ -13,11 +13,11 @@ Describe what your recommender is designed to do and who it is for.
 
 Prompts:
 
-- What kind of recommendations does it generate
+- What kind of recommendations does it generate?
   Simple recommendations that might not match exactly to what the user would consume
-- What assumptions does it make about the user
+- What assumptions does it make about the user?
   They have a heavy preference for genre, mood and energy as it accounts for 7.5/8.5
-- Is this for real users or classroom exploration
+- Is this for real users or classroom exploration?
   Classroom exploration
 
 ---
@@ -28,19 +28,19 @@ Explain your scoring approach in simple language.
 
 Prompts:
 
-- What features of each song are used (genre, energy, mood, etc.)
+- What features of each song are used (genre, energy, mood, etc.)?
   Genre: 3 points, only for an exact match.
   Mood: 2 points, only for an exact match.
   Energy: up to 2 points; the closer to the target, the more it gets.
   Danceability: up to 1 point, scored the same "closer is better" way.
   Tempo: up to 0.5 points, with nothing for songs 100 or more BPM away from the target.
-- What user preferences are considered
+- What user preferences are considered?
   The listeners gives genre, mood, energy, danceability and tempo.
   How does the model turn those into a score
   Every song is checked against the listener's preferences and earns points for each one it matches or comes close to.
   The points are added up, giving a total out of 8.5. All the songs are sorted from highest to lowest score, and the top 5 are shown.
   Each recommendation lists where its points came from, so the listener can see why it was picked.
-- What changes did you make from the starter logic
+- What changes did you make from the starter logic?
   The starter code was empty: it didn't load songs, score them or rank them. I added more songs to the CSV file, the point system, sorted by score and a recommender.
 
 Avoid code here. Pretend you are explaining the idea to a friend who does not program.
@@ -53,13 +53,13 @@ Describe the dataset the model uses.
 
 Prompts:
 
-- How many songs are in the catalog
+- How many songs are in the catalog?
   18
-- What genres or moods are represented
+- What genres or moods are represented?
   pop,happy, lofi, chill, rock,intense, ambient, jazz, relaxed synthwave, moody, focused, indie pop, hip hop, confident, r&b,romantic, metal, angry, country,nostalgic, classical, melancholy reggae, uplifting, edm, euphoric blues, sad
-- Did you add or remove data
+- Did you add or remove data?
   Yes
-- Are there parts of musical taste missing in the dataset
+- Are there parts of musical taste missing in the dataset?
   Yes many genres, more moods, different instrumental types
 
 ---
@@ -70,11 +70,11 @@ Where does your system seem to work well
 
 Prompts:
 
-- User types for which it gives reasonable results
+- User types for which it gives reasonable results?
   Pop
-- Any patterns you think your scoring captures correctly
+- Any patterns you think your scoring captures correctly?
   Gym Hero and Sunrise City were constantly re appearing
-- Cases where the recommendations matched your intuition
+- Cases where the recommendations matched your intuition?
   Only when recommending Pop songs
 
 ---
@@ -85,13 +85,13 @@ Where the system struggles or behaves unfairly.
 
 Prompts:
 
-- Features it does not consider
+- Features it does not consider?
   Acousticness, valence, lyrics, and listening context are ignored
-- Genres or moods that are underrepresented
+- Genres or moods that are underrepresented?
   Most genres and moods have only one song
-- Cases where the system overfits to one preference
+- Cases where the system overfits to one preference?
   Genre and mood outweigh all numeric features, so a lofi song beats an ambient song that might the user better
-- Ways the scoring might unintentionally favor some users
+- Ways the scoring might unintentionally favor some users?
   Pop and lofi listeners get several strong matches, while users with rare tastes get very little
 
 ---
@@ -102,14 +102,14 @@ How you checked whether the recommender behaved as expected.
 
 Prompts:
 
-- Which user profiles you tested
+- Which user profiles you tested?
   High-Energy Pop, Chill Lofi, Deep Intense Rock, Sad but Hyped, Unknown Genre(k-pop, dreamy),
   Out-of-Range Energy
-- What you looked for in the recommendations
+- What you looked for in the recommendations?
   Genre and mood were the most looked in recommending stuff. Next was energy
-- What surprised you
+- What surprised you?
   Capital letters broke it, empty profile still returns 5 songs
-- Any simple tests or comparisons you ran
+- Any simple tests or comparisons you ran?
   - High-Energy Pop and Chill Lofi do not share songs since pop wants high energy tracks and lofi wants slow.
   - High-Energy Pop and Deep Intense Rock share Gym Hero and Sunrise City because both want high energy
   - High-Energy Pop and Sad but Hyped share Gym Hero and Sunrise City as they both prefer higher energy
@@ -132,8 +132,6 @@ Prompts:
 
 Ideas for how you would improve the model next.
 
-Prompts:
-
 - Additional features or preferences
 - More features, better algorithms, possible ML models.
 - Better ways to explain recommendations
@@ -149,9 +147,9 @@ A few sentences about your experience.
 
 Prompts:
 
-- What you learned about recommender systems
+- What you learned about recommender systems?
   They are arbritary and heavily based on whatever algorithm or choices the creator used
-- Something unexpected or interesting you discovered
+- Something unexpected or interesting you discovered?
   That selecting recommendations are very arbritary
-- How this changed the way you think about music recommendation apps
+- How this changed the way you think about music recommendation apps?
   These are just glorified choices made by someone for us
