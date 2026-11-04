@@ -103,8 +103,11 @@ Prompts:
 - What surprised you
   Capital letters broke it, empty profile still returns 5 songs
 - Any simple tests or comparisons you ran
-  High Energy Pop and Chill Lofi share no songs which shows that the algorithm has some effectiveness
-  High energy Pop and deep intense rock both share many commonalities
+  - High-Energy Pop vs Chill Lofi: they share no songs
+  - High-Energy Pop vs Deep Intense Rock share multiple
+  - Chill Lofi vs Deep Intense Rock: they share no songs
+  - High-Energy Pop vs Case Mismatch: the same profile with "Pop"/"Happy" capitalized drops Sunrise City from 8.44 to 3.44
+  - Deep Intense Rock vs Sad but Hyped both lists end up with Gym Hero and Storm Runner
 
 ---
 
