@@ -79,9 +79,13 @@ Where the system struggles or behaves unfairly.
 Prompts:
 
 - Features it does not consider
+  - Acousticness, valence, lyrics, and listening context are ignored
 - Genres or moods that are underrepresented
+  - Most genres and moods have only one song
 - Cases where the system overfits to one preference
+  - Genre and mood outweigh all numeric features, so a lofi song beats an ambient song that might the user better
 - Ways the scoring might unintentionally favor some users
+  - Pop and lofi listeners get several strong matches, while users with rare tastes get very little
 
 ---
 
@@ -92,11 +96,15 @@ How you checked whether the recommender behaved as expected.
 Prompts:
 
 - Which user profiles you tested
+  High-Energy Pop, Chill Lofi, Deep Intense Rock, Sad but Hyped, Unknown Genre(k-pop, dreamy),
+  Case Mismatch, Out-of-Range Energy
 - What you looked for in the recommendations
+  Genre and mood were the most looked in recommending stuff. Next was energy
 - What surprised you
+  Capital letters broke it, empty profile still returns 5 songs
 - Any simple tests or comparisons you ran
-
-No need for numeric metrics unless you created some.
+  High Energy Pop and Chill Lofi share no songs which shows that the algorithm has some effectiveness
+  High energy Pop and deep intense rock both share many commonalities
 
 ---
 
